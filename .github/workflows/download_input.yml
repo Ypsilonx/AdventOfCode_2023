@@ -20,7 +20,7 @@ jobs:
         pip install -r requirements.txt  # Pokud máš soubor s požadovanými balíčky
 
     - name: Run Python Script
-      run: python your_script.py  # Nahraď "your_script.py" názvem tvého skriptu
+      run: python import_data.py  # Nahraď "your_script.py" názvem tvého skriptu
 
     - name: Commit and Push Changes
       run: |
