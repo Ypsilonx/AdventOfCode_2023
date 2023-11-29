@@ -2,7 +2,7 @@ name: Scheduled Data Upload
 
 on:
   schedule:
-    - cron: '0 5 * 12 *'  # Spustí se každý den v půlnoci EST (UTC-5) od 1. do 24. prosince
+    - cron: '0 5 * 12 *'
 
 jobs:
   upload_data:
@@ -12,20 +12,20 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: 3.11  # Specifikuj verzi Pythonu
+        python-version: 3.11
 
     - name: Install Dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt  # Pokud máš soubor s požadovanými balíčky
+        pip install -r requirements.txt
 
     - name: Run Python Script
-      run: python import_data.py  # Nahraď "your_script.py" názvem tvého skriptu
+      run: python import_data.py
 
     - name: Commit and Push Changes
       run: |
-        git config --global user.email "you@example.com"
-        git config --global user.name "Your Name"
+        git config --global cibulect@seznam.cz
+        git config --global ypsilonx
         git add .
-        git commit -m "Scheduled data upload"
+        git commit -m "Next day to work on Python puzzles!"
         git push
