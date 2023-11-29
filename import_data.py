@@ -27,4 +27,5 @@ with open(path_for_python_file, 'w') as f:
     f.write("\n")
 with open(path_for_input_file, 'wb') as f:
     f.write(raw.content)
-
+with open("README.md", "a") as f:
+    f.write(f"\n\n#### {day_number}_12_{year}\n - new puzzles\n - new day\n - new knowledge")
