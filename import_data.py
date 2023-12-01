@@ -3,7 +3,7 @@ import requests
 from datetime import datetime
 
 session_token = os.environ.get('SESSION_TOKEN')
-
+print(session_token)
 def correct_url(year, day_number):
     web_aoc = f'https://adventofcode.com/{year}/day/{day_number}/input'
     try:
@@ -29,5 +29,5 @@ raw = correct_url(year, day_number)
 #     f.write("\n")
 with open(path_for_input_file, 'wb') as f:
     f.write(raw.content)
-with open("README.md", "a") as f:
-    f.write(f"\n\n#### {day_number}_12_{year}\n")
+# with open("README.md", "a") as f:
+#     f.write(f"\n\n#### {day_number}_12_{year}\n")

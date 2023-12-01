@@ -26,8 +26,10 @@ jobs:
         pip install -r 'requirements.txt'
 
     - name: Run Python Script
-      run: python import_data.py
-      env: ${{ secrets.SESSION_TOKEN }}
+      run: |
+        python import_data.py
+      env: 
+        SESSION_TOKEN: ${{ secrets.SESSION_TOKEN }}
 
     - name: Commit and Push Changes
       run: |
