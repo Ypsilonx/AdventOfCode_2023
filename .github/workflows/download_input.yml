@@ -30,8 +30,8 @@ jobs:
 
     - name: Commit and Push Changes
       run: |
-        git config --global cibulect@seznam.cz
-        git config --global ypsilonx
+        git config --global user.email cibulect@seznam.cz
+        git config --global user.name ypsilonx
         git add .
         git commit -m "Next day to work on Python puzzles!"
         git push
