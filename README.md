@@ -7,3 +7,4 @@
  - new puzzles
  - new day
  - new knowledge
+ - VERY hard two part
