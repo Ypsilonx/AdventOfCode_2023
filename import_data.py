@@ -2,15 +2,17 @@ import os
 import requests
 from datetime import datetime
 
-def correct_url(year, day_number):
+def correct_url(year, day_number, token):
+    headers = {'Authorization': f'token {token}'}
     web_aoc = f'https://adventofcode.com/{year}/day/{day_number}/input'
     try:
-        return requests.get(web_aoc)
+        return requests.get(web_aoc, headers=headers)
     except:
         year = input('year?')
         day_number = input('day?')
-        return requests.get(web_aoc)
-    
+        return requests.get(web_aoc, headers=headers)
+
+github_token = os.getenv('GITHUB_TOKEN')
 
 year = datetime.now().year
 day_number = datetime.now().day
@@ -21,7 +23,7 @@ input_file = f'{day_number}_12_{year}_input.txt'
 os.makedirs(folder, exist_ok=True)
 path_for_python_file = os.path.join(folder, python_file)
 path_for_input_file = os.path.join(folder, input_file)
-raw = correct_url(year, day_number)
+raw = correct_url(year, day_number, github_token)
 
 with open(path_for_python_file, 'w') as f:
     f.write("\n")
