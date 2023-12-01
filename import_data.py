@@ -2,10 +2,12 @@ import os
 import requests
 from datetime import datetime
 
+session_token = os.environ.get('SESSION_TOKEN')
+
 def correct_url(year, day_number):
     web_aoc = f'https://adventofcode.com/{year}/day/{day_number}/input'
     try:
-        headers = {'Cookie': f'session={SESSION_TOKEN}'}
+        headers = {'Cookie': f'session={session_token}'}
         return requests.get(web_aoc, headers=headers)
     except:
         year = input('year?')
