@@ -27,6 +27,7 @@ jobs:
 
     - name: Run Python Script
       run: python import_data.py
+      env: ${{ secrets.SESSION_TOKEN }}
 
     - name: Commit and Push Changes
       run: |
