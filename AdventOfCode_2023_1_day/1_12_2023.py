@@ -50,3 +50,4 @@ with open(path_input_data, 'r') as file:
         suma += result
 
 print(suma)
+
