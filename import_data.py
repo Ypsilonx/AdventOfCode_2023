@@ -25,17 +25,17 @@ input_file = f'{day_number}_12_{year}_input.txt'
 entering_file = f'{day_number}_12_{year}_entering.md'
 
 os.makedirs(folder, exist_ok=True)
-path_for_python_file = os.path.join(folder, python_file)
+# path_for_python_file = os.path.join(folder, python_file)
 path_for_input_file = os.path.join(folder, input_file)
 path_for_entering_file = os.path.join(folder, entering_file)
 raw = correct_url(year, day_number)[0]
 entering = correct_url(year, day_number)[1]
 
-with open(path_for_python_file, 'w') as f:
-    f.write("\n")
+# with open(path_for_python_file, 'w') as f:
+#     f.write("\n")
 with open(path_for_entering_file, 'wb') as f:
     f.write(entering.content)
 with open(path_for_input_file, 'wb') as f:
     f.write(raw.content)
-with open("README.md", "a") as f:
-    f.write(f"\n\n#### {day_number}_12_{year}\n")
+# with open("README.md", "a") as f:
+#     f.write(f"\n\n#### {day_number}_12_{year}\n")
