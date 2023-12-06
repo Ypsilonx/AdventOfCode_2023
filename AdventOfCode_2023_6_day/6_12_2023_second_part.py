@@ -5,9 +5,9 @@ def vypocet_moznosti(zavod):
     pocet_moznosti = 1
     for time, distance in zavod:
         posibility_win_race = 0
-        for j in range(0, time + 1):
+        for y in range(0, time + 1):
             if time != 0:
-                start = (time - j) * j
+                start = (time - y) * y
             if start > distance:
                 posibility_win_race += 1
         pocet_moznosti = pocet_moznosti * posibility_win_race
