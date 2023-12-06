@@ -87,10 +87,10 @@ If you'd like to hang out, I'm @ericwastl@hachyderm.io on Mastodon and
 
 -->
 <body>
-<header><div><h1 class="title-global"><a href="/">Advent of Code</a></h1><nav><ul><li><a href="/2023/about">[About]</a></li><li><a href="/2023/events">[Events]</a></li><li><a href="https://teespring.com/stores/advent-of-code" target="_blank">[Shop]</a></li><li><a href="/2023/settings">[Settings]</a></li><li><a href="/2023/auth/logout">[Log Out]</a></li></ul></nav><div class="user">Ypsilonx <span class="star-count">10*</span></div></div><div><h1 class="title-event">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="title-event-wrap">/^</span><a href="/2023">2023</a><span class="title-event-wrap">$/</span></h1><nav><ul><li><a href="/2023">[Calendar]</a></li><li><a href="/2023/support">[AoC++]</a></li><li><a href="/2023/sponsors">[Sponsors]</a></li><li><a href="/2023/leaderboard">[Leaderboard]</a></li><li><a href="/2023/stats">[Stats]</a></li></ul></nav></div></header>
+<header><div><h1 class="title-global"><a href="/">Advent of Code</a></h1><nav><ul><li><a href="/2023/about">[About]</a></li><li><a href="/2023/events">[Events]</a></li><li><a href="https://teespring.com/stores/advent-of-code" target="_blank">[Shop]</a></li><li><a href="/2023/settings">[Settings]</a></li><li><a href="/2023/auth/logout">[Log Out]</a></li></ul></nav><div class="user">Ypsilonx <span class="star-count">12*</span></div></div><div><h1 class="title-event">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="title-event-wrap">y(</span><a href="/2023">2023</a><span class="title-event-wrap">)</span></h1><nav><ul><li><a href="/2023">[Calendar]</a></li><li><a href="/2023/support">[AoC++]</a></li><li><a href="/2023/sponsors">[Sponsors]</a></li><li><a href="/2023/leaderboard">[Leaderboard]</a></li><li><a href="/2023/stats">[Stats]</a></li></ul></nav></div></header>
 
 <div id="sidebar">
-<div id="sponsor"><div class="quiet">Our <a href="/2023/sponsors">sponsors</a> help make Advent of Code possible:</div><div class="sponsor"><a href="https://www.deptagency.com/?utm_source=media-partner&amp;utm_medium=referral&amp;utm_campaign=gl-advent-of-code" target="_blank" onclick="if(ga)ga('send','event','sponsor','sidebar',this.href);" rel="noopener">DEPT</a> - Code whisperers doubling as marketing mavens. We’re the missing link between tech wonders and brand bling, bringing pixel-perfect dreams to life.</div></div>
+<div id="sponsor"><div class="quiet">Our <a href="/2023/sponsors">sponsors</a> help make Advent of Code possible:</div><div class="sponsor"><a href="https://stytch.com/docs/b2b/example-apps?utm_source=adventofcode&amp;utm_medium=paid_sponsorship&amp;utm_campaign=adventofcode-2023" target="_blank" onclick="if(ga)ga('send','event','sponsor','sidebar',this.href);" rel="noopener">Stytch</a> - Do you OIDC what I see? *-*-*-*-*-*-*-*-* Auth Yule Love!</div></div>
 </div><!--/sidebar-->
 
 <main>
@@ -119,7 +119,7 @@ Distance:  9  40  200
 <li>Hold the button for <em><code>4</code> milliseconds</em>. After its remaining 3 milliseconds of travel time, the boat will have gone <em><code>12</code> millimeters</em>.</li>
 <li>Hold the button for <em><code>5</code> milliseconds</em>, causing the boat to travel a total of <em><code>10</code> millimeters</em>.</li>
 <li>Hold the button for <em><code>6</code> milliseconds</em>, causing the boat to travel a total of <em><code>6</code> millimeters</em>.</li>
-<li>Hold the button for <em><code>7</code> milliseconds</em>. That's the entire duration of the race. You never let go of the button. The boat can't move until you let you of the button. Please make sure you let go of the button so the boat gets to move. <em><code>0</code> millimeters</em>.</li>
+<li>Hold the button for <em><code>7</code> milliseconds</em>. That's the entire duration of the race. You never let go of the button. The boat can't move until you let go of the button. Please make sure you let go of the button so the boat gets to move. <em><code>0</code> millimeters</em>.</li>
 </ul>
 <p>Since the current record for this race is <code>9</code> millimeters, there are actually <code><em>4</em></code> different ways you could win: you could hold the button for <code>2</code>, <code>3</code>, <code>4</code>, or <code>5</code> milliseconds at the start of the race.</p>
 <p>In the second race, you could hold the button for at least <code>4</code> milliseconds and at most <code>11</code> milliseconds and beat the record, a total of <code><em>8</em></code> different ways to win.</p>
@@ -127,11 +127,24 @@ Distance:  9  40  200
 <p>To see how much margin of error you have, determine the <em>number of ways you can beat the record</em> in each race; in this example, if you multiply these values together, you get <code><em>288</em></code> (<code>4</code> * <code>8</code> * <code>9</code>).</p>
 <p>Determine the number of ways you could beat the record in each race. <em>What do you get if you multiply these numbers together?</em></p>
 </article>
-<p>To begin, <a href="6/input" target="_blank">get your puzzle input</a>.</p>
-<form method="post" action="6/answer"><input type="hidden" name="level" value="1"/><p>Answer: <input type="text" name="answer" autocomplete="off"/> <input type="submit" value="[Submit]"/></p></form>
+<p>Your puzzle answer was <code>771628</code>.</p><article class="day-desc"><h2 id="part2">--- Part Two ---</h2><p>As the race is about to start, you realize the piece of paper with race times and record distances you got earlier actually just has <span title="Keming!">very bad</span> <a href="https://en.wikipedia.org/wiki/Kerning" target="_blank">kerning</a>. There's really <em>only one race</em> - ignore the spaces between the numbers on each line.</p>
+<p>So, the example from before:</p>
+<pre><code>Time:      7  15   30
+Distance:  9  40  200
+</code></pre>
+<p>...now instead means this:</p>
+<pre><code>Time:      71530
+Distance:  940200
+</code></pre>
+<p>Now, you have to figure out how many ways there are to win this single race. In this example, the race lasts for <em><code>71530</code> milliseconds</em> and the record distance you need to beat is <em><code>940200</code> millimeters</em>. You could hold the button anywhere from <code>14</code> to <code>71516</code> milliseconds and beat the record, a total of <code><em>71503</em></code> ways!</p>
+<p><em>How many ways can you beat the record in this one much longer race?</em></p>
+</article>
+<p>Your puzzle answer was <code>27363861</code>.</p><p class="day-success">Both parts of this puzzle are complete! They provide two gold stars: **</p>
+<p>At this point, you should <a href="/2023">return to your Advent calendar</a> and try another puzzle.</p>
+<p>If you still want to see it, you can <a href="6/input" target="_blank">get your puzzle input</a>.</p>
 <p>You can also <span class="share">[Share<span class="share-content">on
-  <a href="https://twitter.com/intent/tweet?text=%22Wait+For+It%22+%2D+Day+6+%2D+Advent+of+Code+2023&amp;url=https%3A%2F%2Fadventofcode%2Ecom%2F2023%2Fday%2F6&amp;related=ericwastl&amp;hashtags=AdventOfCode" target="_blank">Twitter</a>
-  <a href="javascript:void(0);" onclick="var ms; try{ms=localStorage.getItem('mastodon.server')}finally{} if(typeof ms!=='string')ms=''; ms=prompt('Mastodon Server?',ms); if(typeof ms==='string' && ms.length){this.href='https://'+ms+'/share?text=%22Wait+For+It%22+%2D+Day+6+%2D+Advent+of+Code+2023+%23AdventOfCode+https%3A%2F%2Fadventofcode%2Ecom%2F2023%2Fday%2F6';try{localStorage.setItem('mastodon.server',ms);}finally{}}else{return false;}" target="_blank">Mastodon</a
+  <a href="https://twitter.com/intent/tweet?text=I%27ve+completed+%22Wait+For+It%22+%2D+Day+6+%2D+Advent+of+Code+2023&amp;url=https%3A%2F%2Fadventofcode%2Ecom%2F2023%2Fday%2F6&amp;related=ericwastl&amp;hashtags=AdventOfCode" target="_blank">Twitter</a>
+  <a href="javascript:void(0);" onclick="var ms; try{ms=localStorage.getItem('mastodon.server')}finally{} if(typeof ms!=='string')ms=''; ms=prompt('Mastodon Server?',ms); if(typeof ms==='string' && ms.length){this.href='https://'+ms+'/share?text=I%27ve+completed+%22Wait+For+It%22+%2D+Day+6+%2D+Advent+of+Code+2023+%23AdventOfCode+https%3A%2F%2Fadventofcode%2Ecom%2F2023%2Fday%2F6';try{localStorage.setItem('mastodon.server',ms);}finally{}}else{return false;}" target="_blank">Mastodon</a
 ></span>]</span> this puzzle.</p>
 </main>
 
