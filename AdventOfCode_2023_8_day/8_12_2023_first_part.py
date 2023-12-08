@@ -1,4 +1,5 @@
-﻿
+﻿from itertools import cycle
+
 with open('8_12_2023_input.txt', 'rt') as f:
     radky = f.readlines()
     
@@ -26,20 +27,21 @@ def navigate(prikazy_navigace, slovnik_instrukci):
     vysledek = []
     pocet_prikazu = 0
 
-    while aktualni_klic != 'ZZZ' and prikazy_navigace:
-        prikaz = prikazy_navigace.pop(0)
-        pocet_prikazu += 1
+    for prikaz in cycle(prikazy_navigace):
+        if aktualni_klic == 'ZZZ':
+            break
 
         if aktualni_klic in slovnik_instrukci:
+            print(aktualni_klic)
             hodnoty = slovnik_instrukci[aktualni_klic]
             aktualni_klic = hodnoty[1] if prikaz == 'R' else hodnoty[0]
             vysledek.append(aktualni_klic)
+            pocet_prikazu += 1
         else:
             print(f"Klíč '{aktualni_klic}' nenalezen ve slovníku instrukcí.")
             break
 
     return vysledek, pocet_prikazu
 
-vysledek_navigace, pocet_prikazu = navigate(prikazy_navigace * 5, slovnik_instrukci)
-print(f"Výsledek navigace: {vysledek_navigace}")
+vysledek_navigace, pocet_prikazu = navigate(prikazy_navigace, slovnik_instrukci)
 print(f"Celkový počet provedených navigačních příkazů: {pocet_prikazu}")
